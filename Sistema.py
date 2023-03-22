@@ -2,6 +2,7 @@ from Sequenza import Sequenza
 class Sistema:
     #inizializzo la lista che contiene le sequenze 
     def __init__(self, numSet=3):
+        self.id=-1
         self.lista=list()
         #aggiungo un numeor di sequenze pari a "numSet"
         for x in range(numSet):
