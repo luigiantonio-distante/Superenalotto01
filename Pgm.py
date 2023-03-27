@@ -16,9 +16,13 @@ def f2(repo):
     
 def f3(repo):
     pass
+
 def f4(repo):
-    pass
-def f5(repo):
+    ns=IO.acqNumSistema()
+    seq = IO.acqSequenza()
+    IO.visSistemaPunteggio(repo.getSistema(ns), seq)
+
+def f5(repo):    
     pass
 
 def main():
@@ -28,7 +32,7 @@ def main():
     '1':['Nuovo Sistema',f1],
     '2':['Visualizza Sistema',f2],
     '3':['Modificare',f3],
-    '4':['Ricerca Filtrata',f4],
+    '4':['Colonne Punteggi',f4],
     'U':['Uscita',f5]
     }    
 

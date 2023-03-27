@@ -18,3 +18,5 @@ class Sistema:
         for seq in self.lista:
             s += str(seq) + " "
         return s
+    def getLista(self):
+        return self.lista

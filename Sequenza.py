@@ -15,3 +15,15 @@ class Sequenza:
             else:
                 s += " "+str(c) + " "
         return s+  " >\n"
+    def fromList(self, lista):
+        self.myset=set()
+        for x in lista:
+            self.myset.add(x)
+    def calcolaPunteggio(self, colonnaVincente):
+        i=0
+        for x in self.myset:
+            if x in colonnaVincente.getSet():
+                i+=1
+        return i
+    def getSet(self):
+        return self.myset
