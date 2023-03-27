@@ -16,10 +16,7 @@ class IO:
     def acqSequenza():
         str = input("Sequenza di numeri separati da spazio > ")
         lista = str.split(" ")
-        i=0
-        while i<len(lista):
-            lista[i] = int(lista[i])
-            i+=1
+        lista = [int(x) for x in lista]
         seq=Sequenza(0)
         seq.fromList(lista)
         return seq
@@ -30,6 +27,13 @@ class IO:
         stampa la sequenza
         con relativo punteggio
         """
+        """
         for seq in sistema.getLista():
             print(seq,seq.calcolaPunteggio(sequenzaVincente))
+        """
+        L = [seq for seq in sistema.getLista() if seq.calcolaPunteggio(sequenzaVincente) >= 2]
+        for seq in L:
+            print(seq, seq.calcolaPunteggio(sequenzaVincente))
 
+
+        

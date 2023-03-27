@@ -20,10 +20,6 @@ class Sequenza:
         for x in lista:
             self.myset.add(x)
     def calcolaPunteggio(self, colonnaVincente):
-        i=0
-        for x in self.myset:
-            if x in colonnaVincente.getSet():
-                i+=1
-        return i
+        return len([x for x in self.myset if x in colonnaVincente.getSet()])
     def getSet(self):
         return self.myset
