@@ -23,6 +23,15 @@ def f4(repo):
     IO.visSistemaPunteggio(repo.getSistema(ns), seq)
 
 def f5(repo):    
+    seq = IO.acqSequenza()    
+    L=list()
+    for key in repo.diz:
+        if repo.diz[key].esisteSequenzaPunteggio(2, seq):
+            L.append(key)
+    for s in L:
+        print(s)
+
+def f6(repo):    
     pass
 
 def main():
@@ -33,7 +42,8 @@ def main():
     '2':['Visualizza Sistema',f2],
     '3':['Modificare',f3],
     '4':['Colonne Punteggi',f4],
-    'U':['Uscita',f5]
+    '5':['Elenco Sistemi Vincenti', f5],
+    'U':['Uscita',f6]
     }    
 
     menu = Menu(dictionary, ['u','U'])

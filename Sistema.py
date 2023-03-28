@@ -20,3 +20,11 @@ class Sistema:
         return s
     def getLista(self):
         return self.lista
+    def esisteSequenzaPunteggio(self, num, seq):
+        ret=False
+        i=0
+        while not ret and i < len(self.lista):
+            if self.lista[i].calcolaPunteggio(seq) >= num:
+                ret=True
+            i+=1
+        return ret
