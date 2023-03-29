@@ -32,18 +32,25 @@ def f5(repo):
         print(s)
 
 def f6(repo):    
+    ns=IO.acqNumSistema()
+    for x in repo.diz[ns].lista:
+        if x.filtrata() == True:
+            print(x)
+
+def f7(repo):    
     pass
 
 def main():
     repository = Repository()
 
     dictionary={
-    '1':['Nuovo Sistema',f1],
-    '2':['Visualizza Sistema',f2],
-    '3':['Modificare',f3],
-    '4':['Colonne Punteggi',f4],
-    '5':['Elenco Sistemi Vincenti', f5],
-    'U':['Uscita',f6]
+        '1':['Nuovo Sistema',f1],
+        '2':['Visualizza Sistema',f2],
+        '3':['Modificare',f3],
+        '4':['Colonne Punteggi',f4],
+        '5':['Elenco Sistemi Vincenti', f5],
+        '6':['Sequenze Filtrate', f6],
+        'U':['Uscita',f7]
     }    
 
     menu = Menu(dictionary, ['u','U'])

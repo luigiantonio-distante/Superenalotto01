@@ -23,3 +23,6 @@ class Sequenza:
         return len([x for x in self.myset if x in colonnaVincente.getSet()])
     def getSet(self):
         return self.myset
+    def filtrata(self):
+        return len([pari for pari in self.myset if pari%2==0])==0
+    
