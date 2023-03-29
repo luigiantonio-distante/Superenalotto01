@@ -31,10 +31,12 @@ def f5(repo):
     for s in L:
         print(s)
 
+
 def f6(repo):    
     ns=IO.acqNumSistema()
+    c=5
     for x in repo.diz[ns].lista:
-        if x.filtrata() == True:
+        if x.filtrataSuper(lambda x,y:x>=y,c) == True:
             print(x)
 
 def f7(repo):    

@@ -25,4 +25,5 @@ class Sequenza:
         return self.myset
     def filtrata(self):
         return len([pari for pari in self.myset if pari%2==0])==0
-    
+    def filtrataSuper(self, criterio, k):
+        return criterio(len([pari for pari in self.myset if pari%2==0]), k)
